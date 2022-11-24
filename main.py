@@ -1,8 +1,9 @@
 a = 100
 b = "brrr"
 print (a,b)
-print (input("Введите число"))
-print (input("Напишите, друг"))
+c = (input("Введите число"))
+d = (input("Напишите, друг"))
+print (c,d)
 
 c = input("Введите что-нибудь")
 print (c)
