@@ -8,10 +8,10 @@ b = int(input("Введите второе число "))
 
 
 def divide(var1, var2):
-    if var2 != 0:
+    try:
         return (var1 / var2)
 
-    else:
+    except:
         return ("Старайтесь лучше")
 
 
