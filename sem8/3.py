@@ -3,6 +3,7 @@ class DivNullEror(Exception):
         self.div = div
         self.den = den
 
+
     def div(div, den):
         try:
             den = int(den)
