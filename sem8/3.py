@@ -1,24 +1,24 @@
+# 1. Создать класс-исключение от класса Exception
+# 2. Сгенерировать исключение в нужной точке программы
+# 3. Отловить и обработать
 class DivNullEror(Exception):
-    def __init__(self, div, den):
-        self.div = div
-        self.den = den
+    def __init__(self, txt):
+        self.txt = txt
 
 
-    def div(div, den):
-        try:
-            den = int(den)
-            div = int(div)
-            if den == 0:
-                raise ZeroDivisionError(f'Деление на ноль недопустимо')
-        except ValueError:
-            return ("Вы ввели не число")
-        except ZeroDivisionError:
-            return (f"Деление на ноль")
-        else:
-            return (f'Всё хорошо {div}/{den} = {div / den}')
+div = input("Введите делимое: ")
+den = input("Введите делитель: ")
 
+try:
+    div = int(div)
+    den = int(den)
+    if den == 0:
+        raise DivNullEror("Попытка деления на ноль")
 
-d = DivNullEror(100, 0)
-print(DivNullEror.div(10, 0))
-print(DivNullEror.div(10, 2))
-print(DivNullEror.div(10, "f"))
+except ValueError:
+    print("Вы ввели не число")
+except DivNullEror as err:
+    print(err)
+
+else:
+    print(f"Все хорошо. Ваше число: {int(div) / int(den)}")

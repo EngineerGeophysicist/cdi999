@@ -20,7 +20,7 @@ try:
 except ValueError:
     print("Вы ввели не число")
 except OwnError as err:
-    print(err)
+    print("dsd")
 else:
     print(f"Все хорошо. Ваше число: {inp_data}")
 
