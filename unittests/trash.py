@@ -1,0 +1,2 @@
+c = SportCar("", "")
+        d = WorkCar("", "")
